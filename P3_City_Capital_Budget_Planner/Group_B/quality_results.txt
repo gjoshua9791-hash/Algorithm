@@ -1,0 +1,17 @@
+n,style,seed,B,dp_benefit,greedy_benefit,gap_percent
+40,realistic,1,818,1349,1343,0.445
+40,realistic,2,1380,2215,2214,0.045
+40,realistic,3,792,1190,1190,0.000
+Mean gap for n=40, realistic: 0.163%
+40,correlated,1,818,1088,1046,3.860
+40,correlated,2,1380,1710,1603,6.257
+40,correlated,3,792,1062,1026,3.390
+Mean gap for n=40, correlated: 4.502%
+100,realistic,1,2091,3531,3527,0.113
+100,realistic,2,3158,4769,4762,0.147
+100,realistic,3,2056,3236,3232,0.124
+Mean gap for n=100, realistic: 0.128%
+100,correlated,1,2091,2791,2784,0.251
+100,correlated,2,3158,3998,3982,0.400
+100,correlated,3,2056,2776,2755,0.756
+Mean gap for n=100, correlated: 0.469%

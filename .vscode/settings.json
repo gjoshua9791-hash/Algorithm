@@ -1,3 +1,7 @@
 {
-    "python-envs.defaultEnvManager": "ms-python.python:system"
+    "python-envs.defaultEnvManager": "ms-python.python:system",
+    "python.analysis.extraPaths": [
+        "./P3_City_Capital_Budget_Planner/starter",
+        "./P3_City_Capital_Budget_Planner/data",
+    ]
 }

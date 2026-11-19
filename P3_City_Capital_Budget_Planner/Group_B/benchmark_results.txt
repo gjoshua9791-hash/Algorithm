@@ -1,0 +1,11 @@
+file,algorithm,n,B,score,median_seconds,operations
+projects_n012.json,greedy,12,232,355,0.00000254,12
+projects_n012.json,dp,12,232,359,0.00016800,2215
+projects_n040.json,greedy,40,818,1343,0.00000654,40
+projects_n040.json,dp,40,818,1349,0.00214913,30714
+projects_n040_corr.json,greedy,40,818,1046,0.00000637,40
+projects_n040_corr.json,dp,40,818,1088,0.00235592,30714
+projects_n100.json,greedy,100,2091,3527,0.00001462,100
+projects_n100.json,dp,100,2091,3531,0.02178821,203972
+projects_n1000.json,greedy,1000,21645,36319,0.00020429,1000
+projects_n1000.json,dp,1000,21645,36320,1.38020958,21591886
