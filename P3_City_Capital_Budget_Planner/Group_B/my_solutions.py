@@ -35,11 +35,20 @@ def solve_dp(inst):
 
 
 def solve_greedy(inst):
-    """Greedy (best benefit/cost ratio first).
+    budget = inst["budget"]
+    costs = inst ["cost"]
+    benefits = inst["benefit"]
 
-    Return: a list of project ids to fund, e.g. [0, 4, 7].
-    """
-    raise NotImplementedError("write the greedy technique here")
+    order = sorted(range(inst["n"]), key=lambda i: float("inf") if costs[i] == 0
+                   else benefits[i] / costs[i], reverse=True,)
+    chosen = []
+    for i in order:
+        if costs[i] <= budget:
+            chosen.append(inst["projects"][i]["id"])
+            budget -= costs[i]
+
+    return chosen
+
 
 
 TECHNIQUES = {
