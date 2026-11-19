@@ -27,12 +27,34 @@ def solve_dnc(inst):
 
 
 def solve_dp(inst):
-    """Dynamic programming (0/1 knapsack table).
+    budget = inst["budget"]
+    best = [0] * (budget + 1)
+    took = []
 
-    Return: a list of project ids to fund, e.g. [0, 4, 7].
-    """
-    raise NotImplementedError("write the dp technique here")
+    for i in range(inst["n"]):
+        cost = inst["cost"][i]
+        benefit = inst["benefit"][i]
+        row = bytearray(budget+1)
 
+        for w in range(budget, cost - 1, -1):
+            candidate = best[w - cost] + benefit
+            if candidate > best[w]:
+                best[w] = candidate
+                row[w] =1
+
+        took.append(row)
+
+    remaining = budget
+    chosen = []
+
+    for i in range(inst["n"] - 1, -1, -1):
+        if took[i][remaining]:
+            chosen.append(inst["projects"][i]["id"])
+            remaining -= inst["cost"][i]
+
+    chosen.reverse()
+    return chosen
+    
 
 def solve_greedy(inst):
     budget = inst["budget"]
