@@ -50,3 +50,11 @@ c. save that decision row
 4. Work backward through projects:
 - if the projects saved row says its taken at the remaining budget then add its Id and subtract its cost from the remaining budget
 5. Reverse the selects Ids and return
+
+
+
+
+# Time and Space Complexity
+
+The greedy algorithm has a time complexity of O(n log n) as it sorts the projects by a benefit to cost ratio and then scans that. For space compleixty it uses O(n) for the sorted order and chosen Ids.
+For Dp the time complexty is O(nB) as it counts up to B+1 budgets for every n project. Its space complexity is also O(nB) as the saved decision rows take up this space. 
